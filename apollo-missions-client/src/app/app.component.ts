@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import {PlayerSelectionComponent} from './player-selection/player-selection.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'apollo-missions-client';
+  public hostGameSelected = false;
+
+  constructor(private dialog: MatDialog) {
+  }
+
+  public openPlayerSelectionDialog(): void {
+    this.dialog.open(PlayerSelectionComponent);
+  }
+
 }

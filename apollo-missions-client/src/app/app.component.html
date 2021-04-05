@@ -4,8 +4,8 @@
     <div class="description">
       A cooperative game of working together to achieve greatness... landing on the moon.
     </div>
-    <button mat-raised-button color="primary">Host Game</button>
-    <button mat-raised-button color="primary">Join Game</button>
+    <button mat-raised-button color="primary" (click)="openPlayerSelectionDialog()">Host Game</button>
+    <button mat-raised-button color="primary" [disabled]="hostGameSelected">Join Game</button>
   </div>
 </div>
 

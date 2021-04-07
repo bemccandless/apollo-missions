@@ -1,0 +1,13 @@
+plugins {
+  id 'com.github.node-gradle.node' version '3.0.1'
+}
+
+node {
+  version = '14.16.1'
+}
+
+jar.dependsOn 'npm_run_build'
+
+jar {
+  from 'dist/apollo-missions-client' into 'static'
+}

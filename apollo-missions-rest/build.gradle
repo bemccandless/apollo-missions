@@ -13,6 +13,13 @@ dependencies {
     testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 }
 
+bootJar.enabled = true
+bootRun.enabled = true
+
+jar {
+    enabled = false
+}
+
 sourceCompatibility = '11'
 
 configurations {

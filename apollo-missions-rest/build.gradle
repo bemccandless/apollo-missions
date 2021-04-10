@@ -5,7 +5,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+bootJar.enabled = true
+bootRun.enabled = true
+
+jar {
+    enabled = false
 }
 
 sourceCompatibility = '11'

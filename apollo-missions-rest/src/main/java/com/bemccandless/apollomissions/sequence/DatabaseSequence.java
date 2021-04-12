@@ -11,6 +11,7 @@ public class DatabaseSequence {
 
     @Id
     private String id;
+
     @Field("sequence_number")
     private Long sequenceNumber;
 }

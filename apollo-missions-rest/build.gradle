@@ -3,10 +3,15 @@ apply plugin: 'io.spring.dependency-management'
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'org.springframework.data:spring-data-mongodb'
+    implementation 'org.apache.commons:commons-lang3'
+    compile 'org.mongodb:mongo-java-driver:3.12.8'
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 }
 
 bootJar.enabled = true

@@ -2,5 +2,5 @@ package com.bemccandless.apollomissions.sequence;
 
 public interface SequenceGeneratorService {
 
-    Long getSequenceNumber(String sequenceName);
+    Long getSequenceNumber(final String sequenceName);
 }

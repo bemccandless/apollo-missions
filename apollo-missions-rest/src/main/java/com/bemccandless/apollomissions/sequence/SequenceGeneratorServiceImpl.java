@@ -12,7 +12,7 @@ import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
-public abstract class SequenceGeneratorServiceImpl implements SequenceGeneratorService {
+public class SequenceGeneratorServiceImpl implements SequenceGeneratorService {
 
     private final MongoOperations mongoOperations;
 

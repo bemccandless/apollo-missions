@@ -15,11 +15,9 @@ class GameStateRepositoryTest {
     @Test
     void save() {
         GameState gameState = new GameState();
+        gameState.setId(-1L);
 
         GameState result = instance.save(gameState);
-
-        System.out.println("id=" + result.getId());
-        System.out.println("sessionCode=" + result.getSessionCode());
 
         assertNotNull(result);
         assertNotNull(result.getId());

@@ -16,11 +16,11 @@ public abstract class SequenceGeneratorServiceImpl implements SequenceGeneratorS
 
     private final MongoOperations mongoOperations;
 
-    public Long getSequenceNumber(String sequenceName) {
-        Query findSequenceGenerator = new Query(Criteria.where("id").is(sequenceName));
-        Update incrementSequenceNumber = new Update().inc("sequence_number", 1);
+    public Long getSequenceNumber(final String sequenceName) {
+        final Query findSequenceGenerator = new Query(Criteria.where("id").is(sequenceName));
+        final Update incrementSequenceNumber = new Update().inc("sequence_number", 1);
 
-        DatabaseSequence databaseSequence = mongoOperations.findAndModify(
+        final DatabaseSequence databaseSequence = mongoOperations.findAndModify(
                 findSequenceGenerator,
                 incrementSequenceNumber,
                 FindAndModifyOptions.options()

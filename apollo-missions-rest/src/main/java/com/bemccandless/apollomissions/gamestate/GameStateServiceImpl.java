@@ -13,7 +13,7 @@ public class GameStateServiceImpl implements GameStateService {
     private final SequenceGeneratorService sequenceGenerator;
 
     @Override
-    public GameState save(GameState gameState) {
+    public GameState save(final GameState gameState) {
         if (gameState.getId() == null) {
             gameState.setId(sequenceGenerator.getSequenceNumber(SEQUENCE_NAME));
         }

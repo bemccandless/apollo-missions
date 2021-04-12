@@ -1,5 +1,7 @@
 package com.bemccandless.apollomissions.config;
 
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 
@@ -11,4 +13,8 @@ public class MongoDbConfig extends AbstractMongoClientConfiguration {
         return "apollo-missions";
     }
 
+    @Override
+    public MongoClient mongoClient() {
+        return MongoClients.create();
+    }
 }

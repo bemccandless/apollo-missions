@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  .logo {
+    padding: 25px 50px;
+    width: 200px;
+  }
+  .title {
+    font-size: 50px;
+    font-weight: 500;
+    align-self: center;
+  }
+
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 40px 100px;
+  h2 {
+    color: white;
+    background-color: #797979;
+    text-align: center;
+  }
+  .label {
+    font-weight:  500;
+    font-size: 16px;
+  }
+  .game-settings {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 0 20px;
+    .mat-button-toggle {
+      width: 50px;
+    }
+  }
+  .player-information {
+    width: 500px;
+    .mat-button-toggle {
+      width: 150px;
+    }
+    .mat-form-field {
+      width: 400px;
+    }
+  }
+}
+
+.footer {
+  padding: 75px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .host-button {
+    width: 500px;
+    height: 50px;
+  }
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+

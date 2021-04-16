@@ -1,3 +1,7 @@
 spring:
   application:
     name: Apollo-Missions-Game
+
+server:
+  servlet:
+    context-path: /api

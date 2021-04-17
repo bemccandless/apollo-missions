@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../core/game/game.service';
 import { PlayerType } from '../player/player-type.enum';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-game-setup',
@@ -28,7 +29,11 @@ export class GameSetupComponent implements OnInit {
     this.gameService.hostGame(
       this.playerLimit,
       this.playerName,
-      this.playerType).subscribe();
+      this.playerType).pipe(
+        finalize(() => {
+          this.gameService.savingGameStateSubject.next(false)
+        })
+      ).subscribe();
   }
 
   public disableHostButton(): boolean {

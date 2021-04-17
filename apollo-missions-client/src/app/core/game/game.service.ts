@@ -28,7 +28,6 @@ export class GameService {
       .pipe(
         tap(gameState => {
           this.gameStateSubject.next(gameState);
-          this.savingGameStateSubject.next(false);
         })
       );
   }

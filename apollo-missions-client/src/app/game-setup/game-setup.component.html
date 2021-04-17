@@ -1,0 +1,41 @@
+<div class="header">
+  <img class="logo" src="assets/NASA_Worm.png" alt="NASA Worm logo"/>
+  <div class="title">Game Setup</div>
+</div>
+<mat-divider></mat-divider>
+<mat-progress-bar *ngIf="savingGameState" mode="indeterminate"></mat-progress-bar>
+<div class="main-content">
+  <div class="player-information">
+    <h2>Enter Player Information</h2>
+    <div class="label">Name</div>
+    <mat-form-field color="accent">
+      <input matInput name="player-name" [(ngModel)]="playerName" [value]="playerName">
+    </mat-form-field>
+    <div class="label">Select Type</div>
+    <mat-button-toggle-group [(ngModel)]="playerType">
+      <mat-button-toggle [value]="FLIGHT_CONTROLLER">Flight Controller</mat-button-toggle>
+      <mat-button-toggle [value]="ASTRONAUT">Astronaut</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="game-settings">
+    <h2>Game Settings</h2>
+    <div>
+      <div class="label">Number of Players</div>
+      <mat-button-toggle-group [(ngModel)]="playerLimit">
+        <mat-button-toggle value="2">2</mat-button-toggle>
+        <mat-button-toggle value="3">3</mat-button-toggle>
+        <mat-button-toggle value="4">4</mat-button-toggle>
+        <mat-button-toggle value="5">5</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <button mat-button mat-flat-button
+          class="host-button"
+          color="primary"
+          (click)="hostGame()"
+          [disabled]="disableHostButton()">HOST GAME</button>
+  <div class="break"></div>
+  <button mat-button color="primary" routerLink="/">Cancel</button>
+</div>

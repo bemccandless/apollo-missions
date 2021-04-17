@@ -20,4 +20,5 @@ public class GameStateServiceImpl implements GameStateService {
 
         return gameStateRepository.save(gameState);
     }
+
 }

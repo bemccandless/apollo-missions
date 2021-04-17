@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PlayerSelectionModule } from './player-selection/player-selection.module';
-import { MatButtonModule } from '@angular/material/button';
+import { GameSetupModule } from './game-setup/game-setup.module';
+import { MainMenuModule } from './main-menu/main-menu.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PlayerSelectionModule,
-    MatButtonModule
+    GameSetupModule,
+    MainMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
